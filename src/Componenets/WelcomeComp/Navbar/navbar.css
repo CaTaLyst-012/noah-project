@@ -1,0 +1,162 @@
+/* wrapper to create top gap and center the bar */
+.navbar-wrapper {
+  position: fixed;          /* sit on top of hero */
+  top: 40px;                /* gap from top */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;             /* above hero background */
+  pointer-events: none;     /* wrapper ignores clicks */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* hide on scroll down */
+.navbar-wrapper.navbar-hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+.navbar {
+  pointer-events: auto;     /* bar itself can be clicked */
+  width: 100%;
+  max-width: 1120px;
+  background-color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* left side: logo + brand */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 1.5rem;
+  color: #495366;
+}
+
+/* right side: links + contact icon */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* base link style */
+.nav-link {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495366;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+/* blue top border on hover */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1.6rem; /* sits at the top edge of navbar visually */
+  height: 3px;
+  background-color: #1e6cff; /* blue */
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+/* show line on hover */
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* keep line when active (current page) */
+.nav-link-active::before {
+  transform: scaleX(1);
+}
+
+/* contact icon button */
+.navbar-contact-icon {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-contact-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+/* mobile: hamburger */
+.navbar-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.navbar-toggle-line {
+  width: 20px;
+  height: 2px;
+  background-color: #222222;
+  border-radius: 999px;
+}
+
+/* responsive behavior */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.6rem 1rem;
+  }
+
+  .navbar-right {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .navbar-right-open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* MOBILE: reposition the blue line per item */
+  .nav-link::before {
+    top: 100%;           /* put it under each text */
+    left: 0;
+    right: auto;
+    width: 100%;
+    transform-origin: left;
+  }
+}

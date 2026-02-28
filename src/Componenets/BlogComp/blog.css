@@ -1,0 +1,312 @@
+/* src/pages/Blog.css */
+.blog-page {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+  background-color: #ffffff; /* single white background for whole page */
+  height: 350vh;
+}
+
+/* Left column */
+.blog-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Each blog row card */
+.blog-row {
+  display: flex;
+  gap: 1.5rem;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.blog-row-media {
+  flex: 1.2;
+}
+
+.blog-row-media img,
+.blog-row-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-audio-wrapper {
+  padding: 1.2rem;
+}
+
+.blog-row-content {
+  flex: 1.8;
+  padding: 1.4rem 1.6rem 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-row-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.blog-row-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.blog-row-meta .dot {
+  font-size: 0.9rem;
+}
+
+.blog-row-excerpt {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.blog-row-button {
+  align-self: flex-start;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.blog-row-button:hover {
+  background-color: #1e40af;
+}
+
+/* Sidebar */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Keep sidebar sections as cards if you like the look.
+   They share the same white as the page, just with shadow. */
+.sidebar-box {
+  background: #ffffff;
+  padding: 1.1rem 1.2rem 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-search-input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #374151;
+}
+
+.arrow-bullet {
+  color: #1d4ed8;
+}
+
+/* Popular posts */
+.popular-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.popular-post-item {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.popular-post-item img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.popular-post-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.15rem;
+}
+
+.popular-post-date {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.sidebar-sell-card2 {
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-sell-image-wrapper2 {
+  height: 20vh;
+  background-image: url(../../assets/Images/car16.jpeg);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.sidebar-sell-content2 {
+  background-color: #2563eb;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  height: 40vh;
+}
+
+.sidebar-sell-text2 h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 0 0.35rem 0;
+  margin-bottom: 10px;
+}
+
+.sidebar-sell-text2 p {
+  color: #e5e7ebb6;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 30px;
+  
+}
+
+.sidebar-sell-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  width: 150px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: -40px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-page {
+    grid-template-columns: 1fr;
+    height: auto;          /* override 350vh on tablets/phones */
+    min-height: 100vh;     /* at least full screen, then scroll */
+    padding: 2.5rem 1.5rem;
+  }
+
+  .blog-row {
+    flex-direction: column;
+  }
+
+  .blog-row-content {
+    padding: 1rem 1.2rem 1.3rem;
+  }
+
+  .sidebar-sell-content2 {
+    height: auto;          /* shrink sell card */
+    gap: 1.5rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .sidebar-sell-text2 p {
+    margin-top: 0;
+    margin-bottom: 0.75rem; /* space above button */
+  }
+
+  .sidebar-sell-button {
+    margin-top: 0.75rem;   /* gap between paragraph and button */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page {
+    padding: 2rem 1.25rem;
+  }
+
+  .sidebar-sell-image-wrapper2 {
+    height: 16vh;
+  }
+}
+@media (max-width: 900px) {
+  .blog-page {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem 3.5rem; /* extra bottom padding */
+  }
+}
+
+@media (max-width: 900px) {
+  .blog-page {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem 6rem;  /* big bottom space */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page {
+    padding: 2rem 1.25rem 6rem;   /* same large gap before footer */
+  }
+}

@@ -1,0 +1,310 @@
+/* =========================
+   FULL-SCREEN HERO LAYOUT
+   ========================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 150vh; /* taller so car image shows fully */
+  overflow: hidden;
+}
+
+/* background image layer */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+/* fade animation */
+.hero-bg--fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-bg--fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* dark overlay over the image (lighter now so image is more visible) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+/* inner container for card content */
+.hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  /* content sits lower on the hero */
+  padding: 9rem 1.5rem 7.5rem; /* top, sides, bottom */
+  display: flex;
+  align-items: flex-end; /* pull card toward bottom */
+}
+
+/* =========================
+   BLUE CONTENT CARD
+   ========================= */
+
+.hero-card {
+  max-width: 440px;
+  background-color: #0f3fa8;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #0f3fa8;
+}
+
+.hero-price {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background-color: #1e6cff;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* buttons */
+.hero-button {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button-light {
+  background-color: #ffffff;
+  color: #0f3fa8;
+}
+
+.hero-button-primary {
+  background-color: #1e6cff;
+  color: #ffffff;
+}
+
+/* =========================
+   BOTTOM FORM BAR
+   ========================= */
+
+/* bottom bar holding the forms */
+.hero-form-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  z-index: 20;
+}
+
+.hero-form-inner {
+  width: 100%;
+  max-width: 100%;
+  background-color: #0b2b7a; /* deeper blue */
+  border-radius: 0;
+  padding: 1rem 1.2rem 1.1rem;
+  color: #ffffff;
+  box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* tabs */
+.hero-form-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-form-tab {
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e3ecff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero-form-tab-active {
+  background: #ffffff;
+  color: #0b2b7a;
+}
+
+/* forms */
+.hero-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-form-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  flex: 1;
+}
+
+.hero-form-field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  color: #dfe8ff;
+}
+
+.hero-form-field input,
+.hero-form-field select {
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  padding: 0 0.9rem;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+/* range slider field */
+.hero-form-range {
+  min-width: 220px;
+}
+
+.hero-form-range input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* submit button */
+.hero-form-submit {
+  height: 40px;
+  padding: 0 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #ffffff;
+  color: #0b2b7a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* =========================
+   HERO ARROWS
+   ========================= */
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 25;
+  font-size: 1.4rem;
+}
+
+.hero-arrow-left {
+  left: 1rem;
+}
+
+.hero-arrow-right {
+  right: 1rem;
+}
+
+.hero-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 7rem 1rem 8rem;
+    align-items: flex-end;
+  }
+
+  .hero-card {
+    max-width: 100%;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+
+  .hero-form-inner {
+    padding: 0.9rem 0.8rem 1rem;
+  }
+
+  .hero-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-form-field {
+    min-width: 100%;
+  }
+
+  .hero-form-submit {
+    width: 100%;
+  }
+}

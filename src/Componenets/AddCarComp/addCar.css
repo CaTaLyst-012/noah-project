@@ -1,0 +1,170 @@
+/* SECTION WRAPPER: one shared background for everything */
+.addcar {
+  padding: 3rem 1.5rem 4rem;
+  height: 150vh;
+  margin: 0 auto;
+  background-color: #f3f4f6; /* light grey behind BOTH sections */
+}
+
+/* TOP 5-STEP STRIP */
+.addcar-steps {
+  background-color: transparent;  /* same as section background */
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.addcar-step {
+  text-align: center;
+}
+
+.addcar-step-icon {
+  font-size: 2.2rem;
+  color: #0057ff;
+  margin-bottom: 0.6rem;
+}
+
+.addcar-step-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.addcar-step-text {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.addcar-step-underline {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: #16a34a;
+  margin: 0.2rem auto 0;
+}
+.addcar-step-underlines {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: rgba(46, 45, 45, 0.368);
+  margin: 0.2rem auto 0;
+}
+
+/* FORM WRAPPER */
+.addcar-form-wrapper {
+  background-color: #ffffff; /* white card to show section change */
+  border-radius: 8px;
+  padding: 2rem 2rem 2.5rem;
+}
+
+.addcar-form-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+/* FORM GRID: 3 columns (5 / 5 / 4 fields) */
+.addcar-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.5rem;
+}
+
+.addcar-form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.addcar-form-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #374151;
+}
+
+.addcar-form-field input,
+.addcar-form-field select {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.addcar-form-field input:focus,
+.addcar-form-field select:focus {
+  border-color: #0057ff;
+  box-shadow: 0 0 0 1px rgba(0, 87, 255, 0.2);
+}
+
+/* Save & Continue button */
+.addcar-form-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start; /* left align */
+}
+
+.addcar-save-btn {
+  background-color: #16a34a; /* green */
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.addcar-save-btn:hover {
+  background-color: #15803d;
+  transform: translateY(-1px);
+}
+
+.addcar-save-btn:active {
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .addcar-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .addcar-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* let the section grow with content on tablets */
+  .addcar {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .addcar-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .addcar-form {
+    grid-template-columns: 1fr;
+  }
+
+  .addcar {
+    padding: 2rem 1rem 3rem;
+    height: auto;       /* override the 150vh */
+    min-height: 100vh;  /* full screen at least, but can scroll */
+  }
+}

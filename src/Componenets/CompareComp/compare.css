@@ -1,0 +1,302 @@
+/* src/Componenets/CompareComp/Compare.css */
+
+.compare-page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Top section: full page height, white background */
+
+.compare-top-section {
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 2.5rem 5% 3rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.compare-top-inner {
+  width: 100%;
+}
+
+.compare-heading {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #304551;
+  margin-bottom: 2rem;
+}
+
+/* four cards grid */
+.compare-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 1.8rem;
+  row-gap: 2rem;
+}
+
+.compare-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 35, 52, 0.08);
+  border: 1px solid rgba(13, 42, 74, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 260px;
+}
+
+/* icons */
+
+.compare-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background-color: #f3f6fb;
+  color: #304551;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* larger icons */
+
+.compare-card-icon-big {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* select cards */
+
+.compare-card-select {
+  align-items: stretch;
+}
+
+.compare-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.compare-select {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d7e0;
+  font-size: 0.9rem;
+  color: #304551;
+  outline: none;
+  background-color: #f9fafc;
+}
+
+.compare-select:focus {
+  border-color: #00a86b;
+  box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.12);
+}
+
+/* add cards */
+
+.compare-card-add {
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.compare-card-add .compare-card-icon {
+  background-color: #e8f0ff;
+  color: #0057ff;
+}
+
+.compare-card-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(15, 35, 52, 0.12);
+}
+
+.compare-add-title {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #304551;
+}
+
+/* main compare button */
+
+.compare-top-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.compare-main-btn {
+  background-color: #00a86b;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 3.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(0, 168, 107, 0.25);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+.compare-main-btn:hover {
+  background-color: #01905b;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0, 168, 107, 0.35);
+}
+
+/* Bottom section: full page height, light grey background */
+
+.compare-carousel-section {
+  height: 100vh;
+  background-color: #f3f4f6ee;
+  padding: 2.5rem 5% 3rem;
+  box-sizing: border-box;
+}
+
+/* auto-scroll + manual scroll: flex row with hidden scrollbar */
+
+.compare-carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;             /* allow manual horizontal scroll */
+  overflow-y: hidden;
+  gap: 1.25rem;
+  padding-bottom: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;        /* hide scrollbar in Firefox */
+}
+
+.compare-carousel-inner::-webkit-scrollbar {
+  display: none;                /* hide scrollbar in Chrome/Safari */
+}
+
+/* each pair card: show 2 pairs at a time */
+
+.compare-pair-card {
+  flex: 0 0 50%;      /* two pair cards per viewport */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+
+/* images row: two images touching, VS on top */
+
+.compare-pair-images-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.compare-car-image-wrap {
+  width: 50%;        /* each side exactly half of the pair */
+}
+
+.compare-car-image {
+  width: 100%;       /* fill its half completely */
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+
+/* VS overlay */
+
+.compare-vs-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background-color: rgba(48, 69, 81, 0.9);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* name + price strips below each image */
+
+.compare-car-info-row {
+  display: flex;           /* two equal columns under the pair */
+  width: 100%;             /* span full pair width */
+}
+
+.compare-car-info {
+  width: 50%;              /* each info matches its car's half visually */
+  background-color: #ffffff;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 6px 18px rgba(15, 35, 52, 0.08);
+}
+
+.compare-car-info:first-child {
+  border-radius: 0 0 0.75rem 0;
+}
+
+.compare-car-info:last-child {
+  border-radius: 0 0 0 0.75rem;
+}
+
+.compare-car-name {
+  margin: 0 0 0.15rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #304551;
+}
+
+.compare-car-price {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #04823f;
+}
+
+/* blue compare button under each pair */
+
+.compare-carousel-btn {
+  align-self: flex-start;
+  background-color: #0057ff;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+  margin-top: 0.75rem;
+}
+
+.compare-carousel-btn:hover {
+  background-color: #0044c9;
+  transform: translateY(-1px);
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .compare-car-image {
+    height: 220px;
+  }
+
+  .compare-pair-card {
+    flex: 0 0 100%;           /* on mobile, one pair per view */
+  }
+}
+
+@media (max-width: 1024px) {
+  .compare-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

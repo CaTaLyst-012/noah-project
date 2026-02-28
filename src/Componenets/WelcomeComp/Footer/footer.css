@@ -1,0 +1,251 @@
+.footer {
+  position: relative;
+  background-color: #2e3335;
+  color: #e5e7eb;
+  padding-top: 4.5rem; /* space for overlapping bar */
+}
+
+/* Overlapping top bar */
+
+.footer-top-bar {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: min(1100px, 90%);
+  z-index: 10;
+}
+
+.footer-top-bar-inner {
+  background: linear-gradient(90deg, #020617, #1d4ed8);
+  padding: 2rem 1.4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-top-bar-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+/* Upper footer main */
+
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 5% 2.5rem 5%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.footer-column {
+  min-height: 100%;
+}
+
+.footer-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.8rem;
+}
+
+.footer-text {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #d1d5db;
+  margin-bottom: 0.9rem;
+}
+
+.footer-divider {
+  width: 40px;
+  height: 2px;
+  background-color: #6b7280;
+  margin-bottom: 0.9rem;
+}
+
+/* Contact block */
+
+.footer-contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.footer-contact-icon {
+  font-size: 0.9rem;
+  margin-top: 1px;
+}
+
+.footer-contact-text {
+  font-size: 0.84rem;
+  color: #e5e7eb;
+}
+
+.footer-contact-link {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+.footer-contact-link:hover {
+  color: #60a5fa;
+}
+
+/* Featured deals */
+
+.footer-column-center {
+  text-align: left;
+}
+
+.footer-deal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.footer-deal-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  white-space: nowrap;
+}
+
+.footer-deal-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-deal-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.footer-deal-subtext {
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+/* Form */
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+}
+
+.footer-form-field {
+  width: 100%;
+}
+
+.footer-input,
+.footer-textarea {
+  width: 100%;
+  border-radius: 0.55rem;
+  border: 1px solid #4b5563;
+  background-color: #111827;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.footer-input::placeholder,
+.footer-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.footer-input:focus,
+.footer-textarea:focus {
+  border-color: #3b82f6;
+}
+
+.footer-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.footer-submit-btn {
+  width: 100%;
+  border-radius: 0.55rem;
+  border: none;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 120ms ease;
+}
+
+.footer-submit-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.footer-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Bottom bar */
+
+.footer-bottom {
+  border-top: 1px solid #4b5563;
+  padding: 0.9rem 5% 1.2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom-text {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  .footer-top-bar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-main {
+    padding: 3.2rem 1.5rem 2.2rem 1.5rem;
+  }
+
+  .footer-bottom {
+    padding-inline: 1.5rem;
+  }
+}

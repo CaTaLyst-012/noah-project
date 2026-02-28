@@ -1,0 +1,319 @@
+/* src/components/Home/FeaturedCars/FeaturedCars.css */
+
+.featured-section {
+  background-color: #fcfcffe6;
+  padding: 4rem 5%;
+}
+
+.featured-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.featured-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.featured-title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 0.5rem auto 0.75rem;
+  
+}
+
+.featured-subtext {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Carousel */
+
+.featured-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.featured-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0;
+  scrollbar-width: none;
+}
+
+.featured-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.car-card {
+  min-width: 260px;
+  max-width: 280px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.car-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.car-card:hover .car-card-image {
+  transform: scale(1.05);
+}
+
+.car-card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 999px;
+}
+
+.car-card-badge-sale {
+  background-color: #2563eb;
+}
+
+.car-card-badge-rent {
+  background-color: #22c55e;
+}
+
+.car-card-body {
+  padding: 1rem 1rem 0.75rem;
+}
+
+.car-card-header {
+  margin-bottom: 0.4rem;
+}
+
+.car-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.car-card-name-underline {
+  width: 40px;
+  height: 3px;
+  background-color: #2563eb;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.car-card-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #16a34a;
+  margin: 0;
+}
+
+.car-card-speed {
+  font-size: 0.8rem;
+  color: #4b5563;
+  margin: 0.25rem 0;
+}
+
+.car-card-description {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Footer specs */
+
+.car-card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.car-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: #4b5563;
+}
+
+.car-card-meta img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.car-card-icon {
+  font-size: 1rem;
+}
+
+/* Carousel arrows */
+
+.featured-arrow {
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+  color: #111827;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.4rem;
+  position: absolute;
+  z-index: 2;
+  transition: transform 150ms ease, box-shadow 150ms ease,
+    background-color 150ms ease;
+}
+
+.featured-arrow-left {
+  left: -18px;
+}
+
+.featured-arrow-right {
+  right: -18px;
+}
+
+.featured-arrow:hover {
+  transform: translateY(-1px);
+  background-color: #f9fafb;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.2);
+}
+
+/* Sell your car card */
+
+.featured-sell-card {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  background-color: transparent;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+/* Left: image block */
+
+.featured-sell-image-wrapper {
+  
+  background-color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+
+.featured-sell-image {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  
+}
+
+/* Right: form block */
+
+.featured-sell-content {
+  flex: 1;
+  background-color: #2563eb;
+  height: 120px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.featured-sell-text h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.featured-sell-text p {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  margin: 0;
+  max-width: 420px;
+}
+
+/* Outline button */
+
+.featured-sell-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  padding: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.featured-sell-button:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .featured-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .featured-sell-content {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-carousel-wrapper {
+    margin-bottom: 2.25rem;
+  }
+
+  .featured-arrow-left {
+    left: -10px;
+  }
+
+  .featured-arrow-right {
+    right: -10px;
+  }
+
+  .featured-sell-card {
+    max-width: 100%;
+  }
+
+  .featured-sell-text p {
+    display: none;
+  }
+
+  .featured-sell-button {
+    padding: 0.35rem 1rem;
+    font-size: 0.75rem;
+  }
+}

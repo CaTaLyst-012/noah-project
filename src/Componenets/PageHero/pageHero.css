@@ -1,0 +1,38 @@
+.page-hero {
+  width: 100%;
+  min-height: 50vh; /* half-page */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* full overlay so we can anchor content to the bottom-left */
+.page-hero-overlay {
+  position: absolute;         /* was relative */
+  inset: 0;                   /* top:0; right:0; bottom:0; left:0; */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+/* move inner content to left-bottom */
+.page-hero-inner {
+  position: absolute;
+  left: 1.5rem;
+  bottom: -0.9rem;
+  color: #fff;
+  z-index: 1;                 /* ensure above overlay */
+}
+
+/* TITLE: smaller and with blue background */
+.page-hero-title {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-color: #0057ff;  /* blue background */
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+}

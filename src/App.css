@@ -1,0 +1,34 @@
+html,
+body,
+#root {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+body {
+  margin: 0;
+  background-color: #000; /* hero covers it */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* App layout: navbar + main + footer */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile: let main height be flexible to avoid strange scroll/footer issues */
+@media (max-width: 768px) {
+  .app-main {
+    min-height: auto;
+  }
+}

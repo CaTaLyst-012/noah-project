@@ -1,0 +1,223 @@
+/* Root page container */
+.contact-page {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Section 1: Map */
+.contact-map-section {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Placeholder shell so we don't see a black flash */
+.contact-map-shell {
+  width: 100%;
+  height: 100%;
+  background: #dbeafe;
+  background-image: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.contact-map-iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Section 2: Form + info */
+.contact-form-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Left side */
+.contact-form-left {
+  flex: 2;
+}
+
+.contact-form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Rows for paired inputs */
+.contact-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-family: inherit;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-field-full {
+  width: 100%;
+}
+
+/* Submit button */
+.contact-submit-btn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.7rem 2.5rem;
+  background-color: #2563eb; /* blue */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.contact-submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.contact-submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Right side info box */
+.contact-form-right {
+  flex: 1;
+  display: flex;
+}
+
+.contact-info-box {
+  background-color: #e3edf7; /* light blue-gray */
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.contact-info-icon {
+  margin-top: 0.15rem;
+  color: #2563eb;
+  font-size: 1.2rem;
+}
+
+.contact-info-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-text {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.contact-info-email {
+  word-break: break-all;
+}
+
+/* Mobile / tablet layout fixes */
+@media (max-width: 900px) {
+  .contact-map-section {
+    height: 60vh;         /* shorter map so it doesn't eat full height */
+  }
+
+  .contact-form-section {
+    height: auto;         /* allow form to be taller than one screen */
+    min-height: 100vh;    /* still at least full screen */
+    padding: 2.5rem 0 4rem; /* space above footer */
+  }
+
+  .contact-form-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+  }
+
+  .contact-form-left,
+  .contact-form-right {
+    width: 100%;
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .contact-info-box {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-map-section {
+    height: 55vh;
+  }
+
+  .contact-form-section {
+    padding: 2rem 0 5rem;   /* more breathing room before footer */
+  }
+
+  .contact-form-title {
+    font-size: 1.5rem;
+  }
+}

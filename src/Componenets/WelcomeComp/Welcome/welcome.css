@@ -1,0 +1,89 @@
+.welcome-section {
+  background-color: #fcfcffe6; 
+  padding: 4rem 1.5rem;
+  height: 65vh;
+}
+
+.welcome-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  text-align: center;
+  gap: 1.8rem;              /* less space between text block and image */
+}
+
+.welcome-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+   color: #495366;
+   font-family:'Times New Roman', Times, serif;
+  margin-bottom: 3.5rem;    /* a bit more space before paragraph */
+}
+
+/* middle word underline */
+.welcome-title-middle {
+  position: relative;
+  display: inline-block;
+}
+
+.welcome-title-middle::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  bottom: -1.5rem;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 4px;
+  background-color: #1e6cff;  /* match navbar blue */
+  
+}
+
+/* paragraph slightly wider than before */
+.welcome-description {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 700px;
+  margin-bottom: 0px;
+}
+
+.welcome-image-wrapper {
+  width: 100%;
+  max-width: 720px;
+  margin-top: -90px;
+}
+
+.welcome-image {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 3rem 1.25rem;
+    height: auto;          /* let section grow naturally on small screens */
+  }
+
+  .welcome-inner {
+    gap: 2rem;             /* a bit more space between text and image */
+  }
+
+  .welcome-description {
+    max-width: 100%;
+  }
+
+  .welcome-image-wrapper {
+    margin-top: 0;         /* remove negative overlap on mobile */
+  }
+}
+.welcome-title-middle::after {
+    left: 50%;
+    bottom: -0.9rem;
+    transform: translateX(-50%);
+    width: 30%;
+  }
