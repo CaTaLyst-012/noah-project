@@ -4,7 +4,7 @@ import Welcome from '../../Componenets/WelcomeComp/Welcome/Welcome.jsx';
 import Enquiries from '../../Componenets/WelcomeComp/Enquiries/Enquiries.jsx';
 import FeaturedCars from '../../Componenets/WelcomeComp/FeaturedCars/FeaturedCars.jsx';
 import LatestBlog from '../../Componenets/WelcomeComp/LatestBlog/LatestBlog.jsx';
-import './HomePage.css';
+import './homePage.css';
 
 function HomePage() {
   return (

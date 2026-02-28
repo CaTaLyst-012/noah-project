@@ -1,5 +1,5 @@
 import React from 'react'
-import './ComparePage.css'
+import './comparePage.css'
 import Compare from '../../Componenets/CompareComp/Compare.jsx';
 import PageHero from '../../Componenets/PageHero/PageHero.jsx';
 
