@@ -228,3 +228,10 @@
     padding: 3rem 0 4rem;   /* bottom padding = space before footer */
   }
 }
+/* Mobile: extra space before footer on Latest Blog page */
+@media (max-width: 768px) {
+  .latest-blog-page,
+  .latest-blog-section {
+    padding-bottom: 6rem;   /* tweak 3–5rem to taste */
+  }
+}
