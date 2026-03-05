@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './Componenets/ScrollToTop/ScrollToTop.jsx';
 import Navbar from './Componenets/WelcomeComp/Navbar/Navbar.jsx';
 import Footer from './Componenets/WelcomeComp/Footer/Footer.jsx';
 import Home from './Pages/Home/HomePage.jsx';
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <div className="app-shell">
+        <ScrollToTop />
         <Navbar />
 
         <main className="app-main">
