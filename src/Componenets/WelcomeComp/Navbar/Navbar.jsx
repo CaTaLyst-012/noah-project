@@ -7,9 +7,10 @@ import "./navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleToggleMenu = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen(prev => !prev);
   };
 
   const closeMenu = () => setIsOpen(false);
@@ -21,21 +22,31 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY === 0) {
-        // only show navbar at the very top of the page
+      // Always show when at top
+      if (currentScrollY <= 0) {
         setShowNav(true);
-      } else {
-        // hide navbar as soon as you scroll down, even when scrolling back up
-        setShowNav(false);
+        setLastScrollY(0);
+        return;
       }
+
+      // Detect scroll direction
+      if (currentScrollY > lastScrollY + 5) {
+        // scrolling down
+        setShowNav(false);
+      } else if (currentScrollY < lastScrollY - 5) {
+        // scrolling up
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-    // run once on mount in case page loads scrolled
+    // run once on mount
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header
