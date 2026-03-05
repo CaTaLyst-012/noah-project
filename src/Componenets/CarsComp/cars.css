@@ -344,13 +344,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (max-width: 768px) {
   .cars-page {
     grid-template-columns: 1fr;
-    padding: 2rem 1.5rem 2.5rem;
-    height: auto;        /* override 220vh on mobile */
-    min-height: 100vh;   /* fill screen but scroll if content taller */
+    padding: 2rem 1.5rem 4rem;  /* was 2.5rem, increased bottom padding */
+    height: auto;
+    min-height: 100vh;
   }
 
   .cars-sidebar {
@@ -369,9 +368,10 @@
   }
 
   .cars-page {
-    padding: 1.5rem 1.25rem 2.5rem;
+    padding: 1.5rem 1.25rem 4.5rem; /* was 2.5rem, more space above footer */
   }
 }
+
 @media (max-width: 768px) {
   .sidebar-sell-content {
     height: auto;

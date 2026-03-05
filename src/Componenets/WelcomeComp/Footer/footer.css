@@ -66,12 +66,12 @@
   margin-bottom: 0.9rem;
 }
 
-.footer-divider {
+/* .footer-divider {
   width: 40px;
   height: 2px;
   background-color: #6b7280;
   margin-bottom: 0.9rem;
-}
+} */
 
 /* Contact block */
 
@@ -249,3 +249,24 @@
     padding-inline: 1.5rem;
   }
 }
+/* Center ONLY the footer form on mobile */
+@media (max-width: 768px) {
+  /* target the last column that holds the form */
+  .footer-column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* center the form block itself */
+  }
+
+  .footer-form {
+    width: 100%;
+    max-width: 320px;          /* nice readable width */
+    align-items: stretch;      /* inputs fill the form width */
+  }
+
+  .footer-form-field,
+  .footer-submit-btn {
+    width: 100%;
+  }
+}
+

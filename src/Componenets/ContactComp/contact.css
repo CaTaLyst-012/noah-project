@@ -115,7 +115,6 @@
   font-weight: 600;
   font-size: 0.95rem;
   border: none;
-  border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.15s ease, transform 0.1s ease;
 }
@@ -219,5 +218,13 @@
 
   .contact-form-title {
     font-size: 1.5rem;
+  }
+}
+/* Desktop: add space above footer on Contact page */
+@media (min-width: 901px) {
+  .contact-form-section {
+    height: auto;           /* let it grow naturally */
+    min-height: 100vh;      /* still at least full screen */
+    padding: 3rem 0 4rem;   /* bottom padding = space before footer */
   }
 }
